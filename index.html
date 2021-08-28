@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
+
     <title>Portfolio | Gaurav</title>
   </head>
   <body>
-    <div class="container">
-      <div class="wrapper">
+    <div class="wrapper">
+      <div class="container">
+        <!-- navbar -->
         <nav>
           <h1 class="logo">Portfolio</h1>
           <ul class="nav-links">
@@ -31,10 +37,107 @@
           </div>
         </nav>
       </div>
-      <div class="intro">
-        <h3>Hi, I'm</h3>
-        <h1>Gaurav Supehia</h1>
-        <h3 class="text" id="text"></h3>
+      <div class="part-one">
+        <div class="banner">
+          <!-- typewriter -->
+          <div class="intro animate__animated animate__fadeIn animate__slower">
+            <h3>Hi, I'm</h3>
+            <h1>Gaurav Supehia</h1>
+            <h3 class="text" id="text"></h3>
+
+            <a href="https://twitter.com/GauravSupehia">
+              <button class="social-links twitter">
+                <i class="fab fa-twitter"></i>
+                Twitter
+              </button></a
+            >
+
+            <a href="https://github.com/crazysamurai"
+              ><button class="social-links github">
+                <i class="fab fa-github"></i>Github
+              </button></a
+            >
+
+            <a href="https://linkedin.com/in/gaurav-supehia-crazysamurai">
+              <button class="social-links in">
+                <i class="fab fa-linkedin-in"></i>LinkedIn
+              </button></a
+            >
+          </div>
+
+          <!-- floating-laptop -->
+          <div
+            class="
+              floating-laptop
+              animate__animated animate__fadeIn animate__slower
+            "
+          >
+            <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json"
+              background="transparent"
+              speed="0.7"
+              style="width: 500px; height: 500px"
+              loop
+              autoplay
+            ></lottie-player> -->
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://assets9.lottiefiles.com/private_files/lf30_4y2cuiyr.json"
+              background="transparent"
+              speed="0.7"
+              style="width: 550px; height: 550px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <i
+          class="
+            fas
+            fa-chevron-down
+            animate__animated animate__slideInUp animate__slower
+          "
+        ></i>
+      </div>
+      <div class="about-head">
+        <h1 class="animate__animated animate__fadeIn animate__slower">
+          About Me
+        </h1>
+      </div>
+      <div class="part-two">
+        <div class="about animate__animated animate__fadeIn animate__slower">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <div class="hello">
+            <lottie-player
+              src="https://assets7.lottiefiles.com/packages/lf20_fi2zcy9b.json"
+              background="transparent"
+              speed="1"
+              style="width: 480px; height: 480px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+          <p>
+            My name is Gaurav, I'm 20 years old and I live in India ,
+            specifically in Palampur. I'm a student of Information Technology at
+            a university. I've also been studying a lot on my own to learn new
+            technologies.
+            <br />
+            I started web development in 2020 and since then I've learned a lot
+            of things about it. I'm sure that I'm on the right path because I
+            can see the results of the hard work I've put in so far. <br />
+            Out of all the stuff that is out there in the development world, I'm
+            particularly interested in Web Development and I'm comfortable with
+            quite a few technologies used in the process. I've also started
+            writing about the tech and programming languages I work with on
+            Dev.to. <br />
+            Alongside all this I also enjoy competitive programming,
+            photography, endurance running and casual gaming.
+          </p>
+        </div>
       </div>
     </div>
     <script src="./script/script.js"></script>

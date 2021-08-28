@@ -5,10 +5,18 @@
   font-family: "Fira Code", monospace;
 }
 
-.container {
+.wrapper {
   height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #181818;
 }
 
+.part-one {
+  display: flex;
+  height: 88vh;
+  justify-content: center;
+}
 /* NAVBAR */
 nav {
   display: flex;
@@ -16,6 +24,8 @@ nav {
   align-items: center;
   min-height: 8vh;
   background-color: #202020;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -45,7 +55,7 @@ nav {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #6610f2;
+  background-color: #69ee50;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 250ms ease-in;
@@ -79,10 +89,6 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper {
-    overflow-x: hidden;
-    position: relative;
-  }
   .nav-links {
     position: absolute;
     right: 0px;
@@ -140,15 +146,14 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 92vh;
+  height: 88vh;
   align-items: center;
-  color: #111;
+  color: rgb(255, 255, 255);
 }
 
 .intro h1,
 h3 {
   text-align: left;
-  margin-right: 69%;
   font-weight: 200;
 }
 
@@ -173,13 +178,142 @@ h3 {
 #text {
   display: flex;
   align-items: center;
-  border-right: solid black 1px;
+  border-right: solid #69ee50 1px;
   height: 25px;
+  animation-delay: 2s;
 }
 
 @media screen and (max-width: 1024px) {
   .intro h1,
   h3 {
     margin: 0;
+  }
+}
+
+/* floating laptop */
+
+.banner {
+  width: 80vw;
+  height: 88vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.floating-laptop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* buttons */
+.social-links {
+  height: 3rem;
+  width: 10rem;
+  margin-top: 2rem;
+  border-style: none;
+  border-radius: 5px;
+}
+.social-links i {
+  margin-right: 8px;
+}
+.banner button {
+  color: #202020;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 550;
+  transition: all 0.3s ease;
+}
+.twitter:hover {
+  background-color: #1d9bf0;
+  cursor: pointer;
+  color: white;
+}
+.github:hover {
+  background-color: #46954a;
+  cursor: pointer;
+  color: white;
+}
+.in:hover {
+  background-color: #0a66c2;
+  cursor: pointer;
+  color: white;
+}
+.arrow {
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  color: #69ee50;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 1024px) {
+  .floating-laptop {
+    display: none;
+  }
+  .banner {
+    padding-top: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* .arrow {
+    height: 2vh;
+    font-size: 1rem;
+  } */
+  .social-links {
+    height: 2rem;
+    width: 8rem;
+    margin-top: 1rem;
+  }
+}
+
+/* part-two */
+.about-head {
+  display: block;
+  padding-top: 3rem;
+  background-color: #202020;
+}
+
+.about-head h1 {
+  color: white;
+  text-align: center;
+}
+
+.part-two {
+  background-color: #202020;
+
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+}
+.about {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+.about p {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 200;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hello {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .hello {
+    display: none;
+  }
+  .about {
+    width: 100vw;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about p {
+    background-color: #202020;
+    padding: 1.5rem;
+    font-size: 1rem;
   }
 }
