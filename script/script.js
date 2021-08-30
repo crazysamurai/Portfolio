@@ -1,3 +1,24 @@
+//preloader
+let loader;
+const loadNow = (opacity) => {
+  if (opacity <= 0) {
+    displayContent();
+  } else {
+    loader.style.opacity = opacity;
+    window.setTimeout(function () {
+      loadNow(opacity - 0.05);
+    }, 50);
+  }
+};
+
+const displayContent = () => {
+  loader.style.display = "none";
+  document.getElementById("wrapper").style.display = "block";
+};
+document.addEventListener("DOMContentLoaded", () => {
+  loader = document.getElementById("loader");
+  loadNow(1);
+});
 //navbar
 const navSlide = () => {
   const burger = document.querySelector(".burger");

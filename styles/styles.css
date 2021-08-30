@@ -4,6 +4,17 @@
   box-sizing: border-box;
   font-family: "Fira Code", monospace;
 }
+
+/* preloader */
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  overflow: visible;
+  background: #181818 url("../images/logo.gif") no-repeat center center;
+}
+
 body a {
   text-decoration: none;
 }
@@ -29,7 +40,7 @@ nav {
   min-height: 8vh;
   background-color: #202020;
   position: relative;
-  z-index: 10;
+  z-index: 5;
 }
 
 .logo {
