@@ -96,3 +96,12 @@ appearOptions);
 faders.forEach((fader) => {
   appearOnScroll.observe(fader);
 });
+
+//hidden
+// const hide = () => {
+//   document.getElementById("title").textContent = "Read it on DEV";
+// };
+
+// const reveal = () => {
+//   document.getElementById("title").textContent = "dev";
+// };

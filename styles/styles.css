@@ -4,11 +4,9 @@
   box-sizing: border-box;
   font-family: "Fira Code", monospace;
 }
-
-.hidden {
-  display: none;
+body a {
+  text-decoration: none;
 }
-
 .wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -360,7 +358,6 @@ h3 {
   display: grid;
   width: 80vw;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-bottom: 2rem;
   grid-gap: 2rem;
 }
 .project i {
@@ -384,7 +381,6 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 2rem;
   color: #69ee4f;
 }
 
@@ -409,14 +405,11 @@ h3 {
   justify-content: center;
   background-color: #202020;
 }
-.articles-part a {
-  text-decoration: none;
-}
+
 .articles-grid {
   display: grid;
   width: 80vw;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-bottom: 2rem;
   grid-gap: 2rem;
 }
 
@@ -438,8 +431,50 @@ h3 {
   line-height: 2rem;
 }
 
-.article i {
+.read {
+  height: 3.5rem;
+  width: 13rem;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.blog,
+.git {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.articles-part .blog :hover {
+  background-color: #ff0099;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.git :hover {
+  background-color: #46954a;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.blog i,
+.git i {
+  margin-left: 0.7rem;
   font-size: 2rem;
+}
+
+.article .title {
+  display: flex;
+  align-items: center;
 }
 
 .article h1 {
@@ -451,7 +486,6 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 2rem;
   color: #69ee4f;
 }
 
@@ -464,4 +498,80 @@ h3 {
   .articles-part {
     min-height: 60vh;
   }
+}
+@media screen and (max-width: 1024px) {
+  .articles-grid,
+  .projects-grid {
+    margin-bottom: 2rem;
+  }
+  .git,
+  .blog {
+    margin-bottom: 2rem;
+  }
+}
+
+.tech-part {
+  height: 100vh;
+}
+
+/* skills */
+
+.skill-part {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+.skill-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #69ee4f;
+  margin-bottom: 2.5rem;
+}
+.skills-grid {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 2rem;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+  color: #fff;
+}
+.skill::before,
+.skill::after {
+  --scale: 0;
+  --tooltip-color: #595959;
+  position: absolute;
+  top: -0.25rem;
+  transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+.skill::before {
+  content: attr(data-tooltip);
+  left: 50%;
+  height: 25px;
+  width: max-content;
+  max-width: 100%;
+  background: var(--tooltip-color);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.skill:hover::before,
+.skill:hover::after {
+  --scale: 1;
 }
