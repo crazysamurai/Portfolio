@@ -593,7 +593,7 @@ h3 {
 }
 
 /*badges*/
-.badges {
+/* .badges {
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   justify-content: center;
@@ -635,7 +635,7 @@ h3 {
   color: white;
   cursor: pointer;
   border-radius: 5px;
-}
+} */
 
 /* contact */
 .contact {
@@ -643,7 +643,7 @@ h3 {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-color: #181818;
+  background-color: #202020;
 }
 .contact-head {
   text-align: center;
@@ -663,7 +663,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #202020;
+  background-color: #181818;
   border-radius: 5px;
   height: 2.5rem;
   color: white;
@@ -673,7 +673,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #202020;
+  background-color: #181818;
   border-radius: 5px;
   height: 2.5rem;
   padding: 15px;
