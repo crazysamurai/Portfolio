@@ -252,6 +252,11 @@ h3 {
   cursor: pointer;
   color: white;
 }
+.leetcode:hover {
+  background-color: #ffc11c;
+  cursor: pointer;
+  color: white;
+}
 .arrow {
   height: 4vh;
   display: flex;
@@ -259,6 +264,7 @@ h3 {
   color: #69ee50;
   font-size: 1.5rem;
 }
+
 @media screen and (max-width: 1024px) {
   .floating-laptop {
     display: none;
@@ -293,8 +299,8 @@ h3 {
 }
 
 .part-two {
-  height: 60vh;
-  width: 80vw;
+  height: 60%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
@@ -305,7 +311,7 @@ h3 {
 }
 
 .part-two p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: left;
   font-weight: unset;
   color: white;
@@ -689,7 +695,7 @@ h3 {
   color: #0a66c2;
 }
 .git-link:hover {
-  color: #46954a;
+  color: #5865f2;
 }
 
 .end {
